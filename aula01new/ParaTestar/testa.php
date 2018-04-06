@@ -1,0 +1,1 @@
+phpunit --color EstoqueTest.php
