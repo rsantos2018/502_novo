@@ -14,3 +14,7 @@ git config --global user.email "regi35@terra.com.br"
 
 developer@developer:/var/www/html/500$h
 --apache version
+
+Apagando git
+
+sudo rm -R .git

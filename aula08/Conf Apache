@@ -1,0 +1,29 @@
+Conf Apache
+Criar Virtual Host
+
+cd /etc/apache2/sites-available/
+sudo touch api.conf
+sudo subl api.conf
+
+# Gararantir que vai usar a porta 80
+Listen 80
+
+# Configurar para o apache aceitar pedidos HTTP na porta 80
+NameVirtualHost *:80
+
+<VirtualHost *:80>
+	DocumentRoot /var/www/html/502/aula07/alunos-api/
+	ServerName api.4linux.com
+</VirtualHost>
+
+Adicionou no etc hosts
+
+sudo subl /etc/hosts
+
+127.0.0.1  api.4linux.com
+
+Ativando o Vhost
+
+cd /etc/apache2/sites-available/
+a2ensite api.conf
+sudo service apache2 restart
